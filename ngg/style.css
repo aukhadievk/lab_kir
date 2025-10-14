@@ -1,0 +1,391 @@
+/* Общие стили для всех страниц */
+body {
+    background-color: rgb(240, 248, 255);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Контейнер для контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для логотипа в центре */
+.logo-center {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 300px;
+    height: 120px;
+    border: 3px solid rgb(70, 130, 180);
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Стили для меню */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(70, 130, 180);
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: rgb(100, 160, 210);
+}
+
+/* Стили для заголовков на странице товара */
+h1, h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(70, 130, 180);
+    margin-bottom: 30px;
+}
+
+.product-specs h2,
+.product-description h2 {
+    background-color: rgb(220, 240, 255);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid rgb(70, 130, 180);
+    font-weight: 500;
+}
+
+/* Стили для краткого описания товара */
+.product-description p {
+    color: rgb(75, 75, 75);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #ddd;
+}
+
+/* Стили для подробного описания товара */
+.product-specs {
+    color: rgb(60, 60, 60);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Стили для списка характеристик */
+.product-specs ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-specs li {
+    margin-bottom: 10px;
+    color: rgb(40, 40, 40);
+    font-weight: 500;
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 3px solid rgb(70, 130, 180);
+    transition: background-color 0.2s ease;
+}
+
+.product-specs li:hover {
+    background-color: rgb(245, 250, 255);
+}
+
+.product-specs li::before {
+    content: "✓ ";
+    color: rgb(70, 130, 180);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Стили для каталога */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.product-item {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: rgb(70, 130, 180);
+}
+
+.product-item img {
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.product-item a {
+    color: rgb(70, 130, 180);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.product-item a:hover {
+    color: rgb(100, 160, 210);
+    text-decoration: underline;
+}
+
+.product-item p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* Стили для изображения товара */
+.product-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.product-image img {
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-image img:hover {
+    border-color: rgb(70, 130, 180);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px;
+    background-color: rgb(70, 130, 180);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Стили для приветственного сообщения */
+.welcome {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 30px 0;
+    border-left: 5px solid rgb(70, 130, 180);
+}
+
+.welcome p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+/* Стили для горизонтальной линии */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgb(70, 130, 180), transparent);
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Стили для заголовка сайта */
+header {
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    color: rgb(70, 130, 180);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 20px;
+    color: #666;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+/* Стили для основного контента */
+main {
+    min-height: 60vh;
+    padding: 20px 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .catalog {
+        gap: 15px;
+    }
+    
+    .product-item {
+        width: calc(50% - 20px);
+        min-width: 140px;
+    }
+    
+    .logo {
+        width: 250px;
+        height: 100px;
+    }
+    
+    nav li a {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+    
+    header h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%;
+    }
+    
+    .logo {
+        width: 200px;
+        height: 80px;
+    }
+    
+    nav li {
+        float: none;
+        width: 100%;
+    }
+    
+    nav li a {
+        padding: 14px;
+    }
+}
+
+/* Стили для ссылок в тексте */
+a {
+    color: rgb(70, 130, 180);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(100, 160, 210);
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+.product-specs, .product-description {
+    margin: 25px 0;
+    padding: 0 10px;
+}
+
+.product-specs ul, .product-description p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-item, .welcome, .product-image {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Стили для активной страницы в меню */
+nav li a.active {
+    background-color: rgb(50, 110, 160);
+    border-bottom: 3px solid white;
+}
